@@ -1,5 +1,5 @@
 from fastapi import APIRouter, UploadFile, File
-from ...ingestion.pdf_parser import extract_text
+from ingestion.pdf_parser import extract_text
 from ...embeddings.chunking import chunk_text
 from ...embeddings.embedder import get_embedding
 from ...embeddings.vector_store import upsert

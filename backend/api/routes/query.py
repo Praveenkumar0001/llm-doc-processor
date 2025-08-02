@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends
 from ..models import QueryRequest, QueryResponse
 from ..dependencies import get_db
-from ...ingestion.pdf_parser import extract_text
-from ...embeddings.chunking import chunk_text
-from ...embeddings.embedder import get_embedding
-from ...embeddings.vector_store import query as vs_query
+from ingestion.pdf_parser import extract_text
+from embeddings.chunking import chunk_text
+from embeddings.embedder import get_embedding
+from embeddings.vector_store import query as vs_query
 from ...llm_orchestration.parser_prompt import TEMPLATE as PARSE_TMPL
 from ...llm_orchestration.search_prompt import TEMPLATE as SEARCH_TMPL
 from ...rules_engine.rules import evaluate
