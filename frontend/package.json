@@ -1,19 +1,30 @@
 {
-  "name": "frontend",
+  "name": "llm-doc-processor-frontend",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
+    "@tanstack/react-query": "^5.84.1",
+    "axios": "^1.5.0",
     "next": "^15.4.5",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "tailwindcss": "^4.1.11",
+    "zustand": "^5.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.0.0",
+    "eslint": "^8.50.0",
+    "eslint-config-next": "latest",
     "typescript": "^5.9.2"
-  }
+  },
+  "license": "MIT",
+  "description": "Frontend for LLM Document Processor"
 }
